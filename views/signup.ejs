@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/signup.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign Up</h1>
+        <div style="color: red; margin-bottom: 5px;"><%= errors %></div>
+        <form action="/register" method="POST">
+            <label for="first_name">First Name:</label><br>
+            <input type="text" id="first_name" name="first_name" required><br>
+            <label for="last_name">Last Name:</label><br>
+            <input type="text" id="last_name" name="last_name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="username" pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$" required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br>
+            <label for="preferences">Preferences:</label><br>
+            <input type="text" id="preferences" name="preferences"><br>
+            <input type="submit" id="submit" value="Sign Up">
+            <a href="/login" id="login">Login</a>
+        </form>
+    </div>
+</body>
+</html>
